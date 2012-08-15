@@ -86,3 +86,6 @@
 .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
   background: #ddf;
 }
+h1.slide-label {
+  display: none;
+}
