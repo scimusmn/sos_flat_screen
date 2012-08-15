@@ -5,6 +5,7 @@
 .deck-container {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.75em;
+  letter-spacing: .1em;
   background: #000;
 }
 .deck-container .slide {
@@ -87,5 +88,5 @@
   background: #ddf;
 }
 h1.slide-label {
-  display: none;
+  /*display: none;*/
 }
