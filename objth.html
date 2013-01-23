@@ -24,22 +24,17 @@
 
 	<!-- Visual style -->
 	<link rel="stylesheet" href="./deck-themes/style/fei.css">
-  <style type="text/css">
-    /*
+  
+  <!--
     Production styles.
-    Enable these when running the show as a real presentation to prevent
-    the dev labels and controls from showing.
-
-    @TODO@ - Add a conditional here to allow this setting to be controlled
-             by an argument in the URL.
-    */
-
-    /*
-    h1 {
-      display: none;
+    Enabled when running the show as a real presentation to prevent the dev labels and controls from showing. 
+    ** In your dev environment, add ?dev to the end of the URL to show controls and labels.
+    -->
+  <script type="text/javascript">
+    if (!location.href.match(/(\?|&)dev($|&|=)/)) {
+      document.write('<link rel="stylesheet" type="text/css" href="./deck-themes/style/production.css" />');
     }
-    */
-  </style>
+  </script> 
 	
 	<!-- Transition theme. -->
 	<link rel="stylesheet" href="./deck-themes/transition/fade.css">

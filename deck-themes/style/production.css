@@ -1,0 +1,13 @@
+/*
+ * Production styles.
+ *
+ * These CSS rules are used to hide slide labels and controls,
+ * which are helpful to use during development, but they shouldn't be visible in the production version.
+ *
+ * To prevent this stylesheet from loading, add ?dev to the end of the
+ * URL string.
+*/
+
+h1 {
+  display: none;
+}
