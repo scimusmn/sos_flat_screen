@@ -475,37 +475,21 @@
 
   <!-- End slides. -->
 
-  <!-- Begin extension snippets. Add or remove as needed. -->
-
-  <!--
-  deck.navigation snippet
-  Displays the arrow buttons at the side of the screen.
-  -->
-  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-
-  <!--
-  deck.status snippet
-  Displays the current/total slide number in the bottom right corner.
-  -->
-  <p class="deck-status">
-    <span class="deck-status-current"></span>
-    /
-    <span class="deck-status-total"></span>
-  </p>
-
-  <!-- deck.hash snippet -->
-  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
-
-  <!-- End extension snippets. -->
-
-
   <!-- Required JS files. -->
   <script src="./deck-js/jquery-1.7.2.min.js"></script>
   <script src="./deck-js/core/deck.core.js"></script>
 
   <!-- Core deck.js JS functionality -->
   <script src="./deck-js/core/deck.core.js"></script>
+
+  <!-- Conditionally load extra HTML snippets used for deck extensions -->
+  <!-- These are only needed in a dev environment. To see them, include ?dev in the URL. -->
+  <script type="text/javascript">
+  if (location.href.match(/(\?|&)dev($|&|=)/)) {
+    document.write('<div id="snippets"></div>'); // Target for snippets
+    $('#snippets').load('./deck-extensions/development/snippets.html'); // Load snippet HTML
+  }
+  </script>
 
   <!-- Extension JS files. Add or remove as needed. -->
   <!-- @TODO: Only load hash, menu, status and nav if you're on dev -->
