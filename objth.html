@@ -15,11 +15,8 @@
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="./deck-js/core/deck.core.css">
 	
-	<!-- Extension CSS files go here. Remove or add as needed. -->
-	<link rel="stylesheet" href="./deck-js/extensions/menu/deck.menu.css">
-	<link rel="stylesheet" href="./deck-js/extensions/navigation/deck.navigation.css">
-	<link rel="stylesheet" href="./deck-js/extensions/status/deck.status.css">
-	<link rel="stylesheet" href="./deck-js/extensions/hash/deck.hash.css">
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <!-- Additional dev-only extensions are listed below the production.css -->
 	<link rel="stylesheet" href="./deck-js/extensions/scale/deck.scale.css">
   <link rel="stylesheet" href="./deck-extensions/video/video-js.min.css" >
 
@@ -34,6 +31,12 @@
   <script type="text/javascript">
     if (!location.href.match(/(\?|&)dev($|&|=)/)) {
       document.write('<link rel="stylesheet" type="text/css" href="./deck-themes/style/production.css" />');
+    } else {
+      // Dev-specific extensions
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/menu/deck.menu.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/navigation/deck.navigation.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/status/deck.status.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/hash/deck.hash.css">');
     }
   </script> 
 	
