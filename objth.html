@@ -166,7 +166,7 @@
     <audio>
       <source src="./media/audio/10-a-lot.mp3" type="audio/mpeg" />
     </audio>
-    <video id="10-mammoths" class="video-js vjs-default-skin" width="1024" height="768" autoplay preload="auto" loop data-setup="{}">
+    <video id="10-mammoths" class="video-js vjs-default-skin" width="1024" height="768" autoplay preload="auto" loop>
       <source type="video/mp4" src="./media/images/10-snow.mp4">
     </video>
   </section>
@@ -521,6 +521,8 @@
   <script src="./deck-extensions/audio/deck.audio.js"></script>
   <!-- Video player -->
   <script src="./deck-extensions/video/video.min.js"></script>
+  <!-- Auto play video when a slide is entered -->
+  <script src="./deck-extensions/video/deck.video.js"></script>  
   
   <!-- Initialize the deck. You can put this in an external file if desired. -->
   <script>
