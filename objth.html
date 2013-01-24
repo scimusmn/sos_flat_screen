@@ -486,14 +486,13 @@
   <!-- These are only needed in a dev environment. To see them, include ?dev in the URL. -->
   <script type="text/javascript">
   if (location.href.match(/(\?|&)dev($|&|=)/)) {
-    document.write('<div id="snippets"></div>'); // Target for snippets
-    $('#snippets').load('./deck-extensions/development/snippets.html'); // Load snippet HTML
+    document.write('<div id="dev-extensions"></div>'); // Target for snippets
+    $('#dev-extensions').load('./deck-extensions/development/dev-extensions.html'); // Load dev extension HTML
   }
   </script>
 
   <!-- Extension JS files. Add or remove as needed. -->
-  <!-- @TODO: Only load hash, menu, status and nav if you're on dev -->
-  
+  <!-- @TODO: Only load hash, menu, status and navigation for dev environments. -->
   <!-- Enables deep linking to slides and URL updating -->
   <script src="./deck-js/extensions/hash/deck.hash.js"></script>
   <!-- Enables a keyboard enabled menu of slides -->
@@ -505,7 +504,6 @@
   
   <!-- Scale the slides to fit the viewport/window -->
   <script src="./deck-js/extensions/scale/deck.scale.js"></script>
-  
   <!-- Auto play audio when a slide is entered -->
   <script src="./deck-extensions/audio/deck.audio.js"></script>
   <!-- Video player -->
