@@ -90,3 +90,9 @@
 h1.slide-label {
   /*display: none;*/
 }
+.csstransitions.csstransforms .deck-container:not(.deck-menu) > .slide {
+  padding: 0;
+}
+.slide p, .slide blockquote, .slide iframe, .slide img, .slide ul, .slide ol, .slide pre, .slide video {
+  margin-bottom: 0;
+}
