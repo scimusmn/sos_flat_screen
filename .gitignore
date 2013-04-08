@@ -1,4 +1,9 @@
 .DS_Store
 .sass-cache/
 progress/
-media
+#
+# Ignore media files, but keep the folder and a README file there to 
+# enforce a standard location for the flat screen media
+#
+media/*
+!media/README.md
