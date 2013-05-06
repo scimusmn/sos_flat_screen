@@ -14,11 +14,13 @@ Modified from https://gist.github.com/1873472
     $.deck('getSlide', from).find('video').each(function() {
       var myPlayer = _V_(this);
       myPlayer.pause();
+      myPlayer.currentTime = 0;
     });
 
     // When entering a slide, play the video
     $.deck('getSlide', to).find('video').each(function() {
       var myPlayer = _V_(this);
+      myPlayer.currentTime = 0;
       myPlayer.play();
     });
 
