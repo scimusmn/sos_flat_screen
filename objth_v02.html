@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!--
+  Do not change the <title>.
+  This value is hard coded into the AutoIt scripts that targets
+  this page when it is running in the browser.
+  -->
+  <title>objth</title>
+	
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="./deck-js/core/deck.core.css">
+	
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <!-- Additional dev-only extensions are listed below the production.css -->
+  <link rel="stylesheet" href="./deck-js/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="./deck-extensions/video/video-js.min.css" >
+
+  <!-- Visual style -->
+  <link rel="stylesheet" href="./deck-themes/style/fei.css">
+
+  <!--
+    Production styles.
+    Enabled when running the show as a real presentation to prevent the dev labels and controls from showing. 
+    ** In your dev environment, add ?dev to the end of the URL to show controls and labels.
+    -->
+  <script type="text/javascript">
+    if (!location.href.match(/(\?|&)dev($|&|=)/)) {
+      document.write('<link rel="stylesheet" type="text/css" href="./deck-themes/style/production.css" />');
+    } else {
+      // Dev-specific extensions
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/menu/deck.menu.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/navigation/deck.navigation.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/status/deck.status.css">');
+      document.write('<link rel="stylesheet" href="./deck-js/extensions/hash/deck.hash.css">');
+    }
+  </script> 
+	
+  <!-- Required Modernizr file -->
+  <script src="./deck-js/modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+  <section class="slide">
+    <h1 class="slide-label">Flat screen film</h1>
+    <video id="4-countdown" class="video-js vjs-default-skin" width="1024" height="768" autoplay preload="none" loop>
+      <source type="video/mp4" src="./media/video/flat_01.mp4">
+    </video>
+  </section>
+  <!-- End slides. -->
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+  <div id="snippets">
+    <!--
+    deck.navigation snippet
+    Displays the arrow buttons at the side of the screen.
+    -->
+    <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+    <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+    <!--
+    deck.status snippet
+    Displays the current/total slide number in the bottom right corner.
+    -->
+    <p class="deck-status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.hash snippet -->
+    <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  </div> 
+  <!-- End extension snippets. -->
+
+  <!-- Required JS files. -->
+  <script src="./deck-js/jquery-1.7.2.min.js"></script>
+  <script src="./deck-js/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <!-- @TODO: Only load hash, menu, status and navigation for dev environments. -->
+  <!-- Enables deep linking to slides and URL updating -->
+  <script src="./deck-js/extensions/hash/deck.hash.js"></script>
+  <!-- Enables a keyboard enabled menu of slides -->
+  <script src="./deck-js/extensions/menu/deck.menu.js"></script>
+  <!-- Enables a current/total slide indicator -->
+  <script src="./deck-js/extensions/status/deck.status.js"></script>
+  <!-- Enables on screen navigation buttons -->
+  <script src="./deck-js/extensions/navigation/deck.navigation.js"></script>
+  
+  <!-- Scale the slides to fit the viewport/window -->
+  <script src="./deck-js/extensions/scale/deck.scale.js"></script>
+  <!-- Auto play audio when a slide is entered -->
+  <script src="./deck-extensions/audio/deck.audio.js"></script>
+  <!-- Video player -->
+  <script src="./deck-extensions/video/video.min.js"></script>
+  <!-- Auto play video when a slide is entered -->
+  <script src="./deck-extensions/video/deck.video.js"></script>  
+  
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+
+</body>
+</html>
