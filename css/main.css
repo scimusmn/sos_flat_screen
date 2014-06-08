@@ -1,0 +1,20 @@
+*::selection {
+    background:transparent;
+}
+
+*,
+*:active,
+*:hover
+*:link,
+*:visited {
+  cursor: url(../img/cursor.png), none !important;
+}
+
+*::-moz-selection {
+    background:transparent;
+}
+
+*::-webkit-selection {
+    background:transparent;
+}
+
