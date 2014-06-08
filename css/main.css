@@ -18,3 +18,14 @@
     background:transparent;
 }
 
+.video-container {
+  width: 1024px;
+  display: block;
+  overflow: hidden;
+  height: 768px;
+}
+
+#example_video_1 {
+  margin-left: -269px;
+  margin-top: -76px;
+}
