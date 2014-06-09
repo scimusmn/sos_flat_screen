@@ -67,6 +67,15 @@ iosocket.on('connect', function () {
 });
 
 iosocket.on('message', function(message) {
-    $('.zztop').html(message);
-    console.log(message);
+    console.log("Got a UDP message");
+    switch(message) {
+        case 'objth_play':
+            objthPlay();
+            break;
+        case 'other':
+            console.log('other');
+            break;
+        default:
+            console.log('nothing');
+    }
 });
