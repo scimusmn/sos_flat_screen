@@ -8,9 +8,54 @@
  * Disable the preloading spinner icon.
  * We don't want to show this to museum visitors while the video is loading.
  */
-videojs("example_video_1", {
+
+/**
+ * Clear everything to start
+ */
+$('.video-container-objth').hide();
+$('.img-container').show();
+
+/**
+ * Objecth Theater video setup
+ */
+var objthPlayer = videojs("objth", {
     muted: true,
     children: {
         loadingSpinner: false
+    }
+});
+
+function objthPlay() {
+    console.log("Playing the object theater")
+    $('.video-container-objth').show();
+    objthPlayer.load();
+    objthPlayer.play();
+}
+
+/**
+ * Interlude setup
+ */
+function interludePlay() {
+    $('.video-container-objth').hide();
+    $('.img-container').show();
+}
+
+/**
+ * Listen for keystrokes
+ */
+$(document).keydown(function(e){
+    /**
+     * #1
+     */
+    if (e.keyCode == 81) {
+        console.log('Q pressed');
+        objthPlay();
+    }
+    /**
+     * #2
+     */
+    if (e.keyCode == 87) {
+        console.log('W pressed');
+        interludePlay();
     }
 });
