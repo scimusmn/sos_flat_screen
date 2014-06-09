@@ -2,7 +2,8 @@ var static = require('node-static'),
     http = require('http'),
     util = require('util'),
     url = require('url'),
-    fs = require('fs');
+    fs = require('fs'),
+    dgram = require('dgram');
 
 // create static server for decks
 var fileServer = new static.Server('./public');
@@ -23,6 +24,16 @@ var server = http.createServer(function (req, res) {
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket){
+    /**
+     * Listen for UDP messages on port 7788
+     */
+    udpsocket = dgram.createSocket('udp4');
+    udpsocket.on('message', function(content, rinfo) {
+        console.log('got message', content, 'from', rinfo.address, rinfo.port);
+        io.sockets.emit('udp message', content.toString());
+        socket.broadcast.emit('message', content.toString());
+    });
+    udpsocket.bind(7788);
 
     socket.on('message', function(message){
         socket.broadcast.emit('message', message);
