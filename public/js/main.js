@@ -13,7 +13,7 @@
  * Clear everything to start
  */
 $('.video-container-objth').hide();
-$('.img-container').show();
+$('.img-container').hide();
 
 /**
  * Objecth Theater video setup
