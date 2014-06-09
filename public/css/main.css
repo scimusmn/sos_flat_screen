@@ -2,13 +2,13 @@
     background:transparent;
 }
 
-*,
-*:active,
-*:hover
-*:link,
-*:visited {
-  cursor: url(../img/cursor.png), none !important;
-}
+/**,*/
+/**:active,*/
+/**:hover*/
+/**:link,*/
+/**:visited {*/
+  /*cursor: url(../img/cursor.png), none !important;*/
+/*}*/
 
 *::-moz-selection {
     background:transparent;
