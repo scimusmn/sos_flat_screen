@@ -27,3 +27,7 @@ body {
   overflow: hidden;
   height: 768px;
 }
+#objth {
+  margin-left: -256px;
+  margin-top: -150px;
+}
