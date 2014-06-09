@@ -41,6 +41,7 @@ io.sockets.on('connection', function(socket){
 
     socket.on('key down', function(data){
         socket.broadcast.emit('key down', data);
+        console.log("Key down");
     });
 
     socket.on('key up', function(data){

@@ -59,3 +59,14 @@ $(document).keydown(function(e){
         interludePlay();
     }
 });
+
+var iosocket = io.connect();
+
+iosocket.on('connect', function () {
+    console.log('connected');
+});
+
+iosocket.on('message', function(message) {
+    $('.zztop').html(message);
+    console.log(message);
+});
