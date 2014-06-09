@@ -14,6 +14,7 @@
  */
 $('.video-container-objth').hide();
 $('.img-container').hide();
+$('.interlude').hide();
 
 /**
  * Objecth Theater video setup
@@ -37,7 +38,8 @@ function objthPlay() {
  */
 function interludePlay() {
     $('.video-container-objth').hide();
-    $('.img-container').show();
+    $('.img-container').hide();
+    $('.interlude').show();
 }
 
 /**
@@ -72,7 +74,8 @@ iosocket.on('message', function(message) {
         case 'objth_play':
             objthPlay();
             break;
-        case 'other':
+        case 'interlude':
+            interludePlay();
             console.log('other');
             break;
         default:
