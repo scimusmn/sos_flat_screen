@@ -31,3 +31,13 @@ body {
   margin-left: -256px;
   margin-top: -150px;
 }
+
+.interlude {
+  font-size: 4em;
+  color: #DDD;
+  width: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
