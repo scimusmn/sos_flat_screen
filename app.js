@@ -14,13 +14,24 @@ var server = http.createServer(function (req, res) {
     console.log('pathname: '+pathname);
 
     req.addListener('end', function () {
-        fileServer.serve(req, res);
+        fileServer.serve(req, res, function(err, result) {
+            if (err) {
+                console.error('Error serving %s - %s', req.url, err.message);
+                if (err.status === 404 || err.status === 500) {
+                    file.serveFile(util.format('/%d.html', err.status), err.status, {}, req, res);
+                } else {
+                    res.writeHead(err.status, err.headers);
+                res.end();
+                }
+            } else {
+                console.log('%s - %s', req.url, res.message);
+            }
+        });
     }).resume();
 
 }).listen(process.env.PORT || 9090, function() {
     console.log('Listening at: http://localhost:' + (process.env.PORT || 9090));
 });
-
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket){
