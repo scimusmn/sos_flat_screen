@@ -38,10 +38,10 @@ function objthPlay() {
  * Black
  */
 function blackPlay() {
-    $('.video-container-objth').hide();
+    $('.video-container-objth').fadeOut();
     $('.img-container').hide();
-    $('.black').hide();
-    $('.interlude').fadeIn(9000);
+    $('.black').fadeIn();
+    $('.interlude').fadeOut();
 }
 
 /**
