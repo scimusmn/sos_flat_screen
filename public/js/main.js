@@ -15,6 +15,7 @@
 $('.video-container-objth').hide();
 $('.img-container').hide();
 $('.interlude').hide();
+$('.black').hide();
 
 /**
  * Objecth Theater video setup
@@ -34,11 +35,22 @@ function objthPlay() {
 }
 
 /**
+ * Black
+ */
+function blackPlay() {
+    $('.video-container-objth').hide();
+    $('.img-container').hide();
+    $('.black').hide();
+    $('.interlude').fadeIn(9000);
+}
+
+/**
  * Interlude setup
  */
 function interludePlay() {
     $('.video-container-objth').hide();
     $('.img-container').hide();
+    $('.black').hide();
     $('.interlude').show();
 }
 
@@ -47,18 +59,25 @@ function interludePlay() {
  */
 $(document).keydown(function(e){
     /**
-     * #1
+     * Q
      */
     if (e.keyCode == 81) {
         console.log('Q pressed');
         objthPlay();
     }
     /**
-     * #2
+     * W
      */
     if (e.keyCode == 87) {
         console.log('W pressed');
         interludePlay();
+    }
+    /**
+     * E
+     */
+    if (e.keyCode == 69) {
+        console.log('E pressed');
+        blackPlay();
     }
 });
 
