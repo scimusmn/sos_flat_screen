@@ -81,23 +81,23 @@ $(document).keydown(function(e){
     }
 });
 
-var iosocket = io.connect();
+//var iosocket = io.connect();
 
-iosocket.on('connect', function () {
-    console.log('connected');
-});
+//iosocket.on('connect', function () {
+    //console.log('connected');
+//});
 
-iosocket.on('message', function(message) {
-    console.log("Got a UDP message");
-    switch(message) {
-        case 'objth_play':
-            objthPlay();
-            break;
-        case 'interlude':
-            interludePlay();
-            console.log('other');
-            break;
-        default:
-            console.log('nothing');
-    }
-});
+//iosocket.on('message', function(message) {
+    //console.log("Got a UDP message");
+    //switch(message) {
+        //case 'objth_play':
+            //objthPlay();
+            //break;
+        //case 'interlude':
+            //interludePlay();
+            //console.log('other');
+            //break;
+        //default:
+            //console.log('nothing');
+    //}
+//});
