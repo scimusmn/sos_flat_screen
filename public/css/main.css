@@ -10,7 +10,8 @@ body {
 *:hover
 *:link,
 *:visited {
-  cursor: url(../img/cursor.png), none !important;
+  /*cursor: url(../img/cursor.png), none !important;*/
+  cursor: none !important;
 }
 
 *::-moz-selection {
