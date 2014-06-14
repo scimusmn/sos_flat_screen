@@ -1,0 +1,40 @@
+body {
+  background: #000;
+}
+*::selection {
+    background:transparent;
+}
+
+*,
+*:active,
+*:hover
+*:link,
+*:visited {
+  /*cursor: url(../img/cursor.png), none !important;*/
+  cursor: none !important;
+}
+
+*::-moz-selection {
+    background:transparent;
+}
+
+*::-webkit-selection {
+    background:transparent;
+}
+
+.video-container {
+  width: 1024px;
+  display: block;
+  overflow: hidden;
+  height: 768px;
+}
+
+.interlude {
+  font-size: 4em;
+  color: #DDD;
+  width: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

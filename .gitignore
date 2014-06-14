@@ -5,5 +5,5 @@ progress/
 # Ignore media files, but keep the folder and a README file there to 
 # enforce a standard location for the flat screen media
 #
-media/*
-!media/README.md
+public/media/*
+!public/media/README.md
