@@ -1,5 +1,12 @@
 /**
- * Video player settings
+ * Init the slide deck
+ */
+$(function() {
+    $.deck('.slide');
+});
+
+/**
+ * Video setup
  *
  * Mute any music
  * Any audio comes from the SOS.
@@ -8,20 +15,8 @@
  * Disable the preloading spinner icon.
  * We don't want to show this to museum visitors while the video is loading.
  */
-
-/**
- * Clear everything to start
- */
-$('.video-container-objth').hide();
-$('.img-container').hide();
-$('.interlude').hide();
-$('.black').hide();
-
-/**
- * Objecth Theater video setup
- */
 var objthPlayer = videojs("objth", {
-    muted: true,
+//    muted: true,
     children: {
         loadingSpinner: false
     }
@@ -41,7 +36,7 @@ function blackPlay() {
     $('.video-container-objth').fadeOut();
     $('.img-container').hide();
     $('.black').fadeIn();
-    $('.interlude').fadeOut();
+    $('.dummy').fadeOut();
 }
 
 /**
@@ -51,7 +46,7 @@ function interludePlay() {
     $('.video-container-objth').hide();
     $('.img-container').hide();
     $('.black').hide();
-    $('.interlude').show();
+    $('.dummy').show();
 }
 
 /**
@@ -62,22 +57,22 @@ $(document).keydown(function(e){
      * Q
      */
     if (e.keyCode == 81) {
-        console.log('Q pressed');
-        objthPlay();
+        console.log('Q pressed. Going to the Object Theater slide');
+        $.deck('go', 'objth-slide')
     }
     /**
      * W
      */
     if (e.keyCode == 87) {
         console.log('W pressed');
-        interludePlay();
+        $.deck('go', 'black-slide')
     }
     /**
      * E
      */
     if (e.keyCode == 69) {
         console.log('E pressed');
-        blackPlay();
+        $.deck('go', 'interlude-slide')
     }
 });
 
