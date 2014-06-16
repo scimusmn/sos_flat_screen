@@ -7,20 +7,20 @@
  */
 
 (function($, deck, undefined) {
-  $(document).bind('deck.change', function(e, from, to) {
+    $(document).bind('deck.change', function(e, from, to) {
 
-    // When leaving a slide, pause the video
-    $.deck('getSlide', from).find('video').each(function() {
-      var myPlayer = _V_(this);
-      myPlayer.pause();
+        // When leaving a slide, pause the video
+        $.deck('getSlide', from).find('video').each(function() {
+            var myPlayer = _V_(this);
+            myPlayer.pause();
+        });
+
+        // When entering a slide, play the video
+        $.deck('getSlide', to).find('video').each(function() {
+            var myPlayer = _V_(this);
+            myPlayer.load();
+            myPlayer.play();
+        });
+
     });
-
-    // When entering a slide, play the video
-    $.deck('getSlide', to).find('video').each(function() {
-      var myPlayer = _V_(this);
-      myPlayer.load();
-      myPlayer.play();
-    });
-
-  });
 })(jQuery, 'deck');
