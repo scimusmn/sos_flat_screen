@@ -22,33 +22,6 @@ var objthPlayer = videojs("objth", {
     }
 });
 
-function objthPlay() {
-    console.log("Playing the object theater")
-    $('.video-container-objth').show();
-    objthPlayer.load();
-    objthPlayer.play();
-}
-
-/**
- * Black
- */
-function blackPlay() {
-    $('.video-container-objth').fadeOut();
-    $('.img-container').hide();
-    $('.black').fadeIn();
-    $('.dummy').fadeOut();
-}
-
-/**
- * Interlude setup
- */
-function interludePlay() {
-    $('.video-container-objth').hide();
-    $('.img-container').hide();
-    $('.black').hide();
-    $('.dummy').show();
-}
-
 /**
  * Listen for keystrokes
  */
