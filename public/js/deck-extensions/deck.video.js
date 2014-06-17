@@ -18,9 +18,9 @@
         // When entering a slide, play the video
         $.deck('getSlide', to).find('video').each(function() {
             var myPlayer = _V_(this);
-            myPlayer.currentTime(0);
             myPlayer.load();
             myPlayer.play();
+            /*myPlayer.currentTime(0);*/
         });
 
     });
