@@ -90,6 +90,18 @@ $(document).keydown(function(e){
     }
 });
 
+/**
+ * Create a timer on the interlude slide
+ */
+$(document).ready(function() {
+    var timerSeconds = 30
+    var submitCountdown = new Countdown(timerSeconds, function(seconds) {
+        $('.next-timer').text(seconds + ' seconds');
+    }, function() {
+        $.deck('go', 'black-slide')
+    });
+});
+
 //var iosocket = io.connect();
 
 //iosocket.on('connect', function () {

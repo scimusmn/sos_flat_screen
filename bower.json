@@ -4,7 +4,7 @@
   "dependencies": {
     "bootstrap": "~3.1.1",
     "deck.js": "~1.1.0",
-    "FlipClock": "master",
+    "countdown.js": "~v1.1.0",
     "modernizr": "~2.8.2",
     "video.js-dist": "dist"
   }
