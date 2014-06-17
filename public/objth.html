@@ -3,54 +3,60 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/video-js.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-</head>
-<body>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="bower_components/video.js-dist/dist/video-js/video-js.min.css" type="text/css">
+        <link rel="stylesheet" href="bower_components/deck.js/core/deck.core.css">
+        <link rel="stylesheet" href="bower_components/deck.js/themes/transition/fade.css">
+        <link rel="stylesheet" href="css/main.css">
 
-<section class="section">
-    <div class="video-container video-container-objth">
-        <video id="objth" class="video-js vjs-default-skin" autoplay preload="auto" width="1024" height="768" data-setup="{}">
-            <source src="media/video/sos_pc_handb.mp4" type='video/mp4' />
-        </video>
+        <!-- Modernizr is required for everything else first -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+
+    </head>
+    <body>
+
+    <div class="deck-container">
+        <section class="slide" id="black-slide">
+            <div class="black"></div>
+        </section>
+
+        <section class="slide" id="objth-slide">
+            <div class="video-container video-container-objth">
+                <video id="objth" class="video-js vjs-default-skin" preload="auto" width="1024" height="768" data-setup="{}">
+                    <source src="media/video/sos_pc.mp4" type='video/mp4' />
+                </video>
+            </div>
+        </section>
+
+        <section class="slide" id="interlude-slide">
+            <div class="interlude">
+                <img src="media/img/next-show.png" width="1024" height="768">
+            </div>
+        </section>
+
+        <section class="slide" id="img-slide">
+            <div class="img-container">
+                <img class="film-1" src="media/img/blue.jpg" width="1024" height="768">
+            </div>
+        </section>
     </div>
-</section>
 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/video.js-dist/dist/video-js/video.js"></script>
+    <script src="bower_components/deck.js/core/deck.core.js"></script>
+    <script src="js/deck-extensions/deck.video.js"></script>
+    <script src="js/main.js"></script>
 
-<section>
-    <div>
-        This is a section that I want
-    </div>
-</section>
-
-<section class="section">
-    <div class="black">This is ca i type a  a test</div>
-</section>
-
-<div class="interlude">
-    The next film<br />will begin shortly
-</div>
-
-<div class="img-container">
-    <img class="film-1" src="media/img/blue.jpg" width="1024" height="768">
-</div>
-
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/video.js/dist/video-js/video.js"></script>
-<script src="bower_components/BigVideo.js/lib/bigvideo.js"></script>
-<script src="js/main.js"></script>
-</body>
+    </body>
 </html>
