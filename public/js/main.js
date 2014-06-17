@@ -61,16 +61,26 @@ $(document).keydown(function(e){
         console.log('R pressed');
         $.deck('go', 'interlude-slide');
 
-        /**
-         * Start the timer
-         */
-        console.log("Starting the timer");
+    }
+});
+
+/**
+ * Start the timer on the interlude slide, reset it when we leave this slide
+ */
+$("#interlude-slide").on({
+    'deck.becameCurrent': function(ev, direction) {
         $('.next-timer').pietimer({
-            seconds: 15,
+            seconds: 10,
             colour: '#B32037'
-        }, function() {
+        }, function () {
             $.deck('go', 'black-slide')
         });
+    },
+    /**
+    * Reset the timer if we leave the interlude screen
+    */
+    'deck.lostCurrent': function(ev, direction) {
+        clearInterval(interval);
     }
 });
 
