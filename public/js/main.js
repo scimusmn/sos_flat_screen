@@ -70,7 +70,7 @@ $(document).keydown(function(e){
 $("#interlude-slide").on({
     'deck.becameCurrent': function(ev, direction) {
         $('.next-timer').pietimer({
-            seconds: 10,
+            seconds: 20,
             colour: '#B32037'
         }, function () {
             $.deck('go', 'black-slide')
@@ -84,6 +84,9 @@ $("#interlude-slide").on({
     }
 });
 
+/**
+ * Pie timer
+ */
 jQuery.fn.pietimer = function( options, callback ) {
     var settings = {
         'seconds': 5,
