@@ -7,3 +7,4 @@ progress/
 #
 public/media/*
 !public/media/README.md
+!public/media/img
