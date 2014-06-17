@@ -53,25 +53,39 @@ function interludePlay() {
  * Listen for keystrokes
  */
 $(document).keydown(function(e){
+
     /**
      * Q
      */
     if (e.keyCode == 81) {
-        console.log('Q pressed. Going to the Object Theater slide');
+        console.log('Q - Loading paused Object Theater video.');
         $.deck('go', 'objth-slide')
     }
+
     /**
      * W
      */
     if (e.keyCode == 87) {
-        console.log('W pressed');
-        $.deck('go', 'black-slide')
+        console.log('W - Playing Object Theater video.');
+        $('#objth-slide').find('video').each(function() {
+            var myPlayer = _V_(this);
+            myPlayer.play();
+        });
     }
+
     /**
      * E
      */
     if (e.keyCode == 69) {
         console.log('E pressed');
+        $.deck('go', 'black-slide')
+    }
+
+    /**
+     * R
+     */
+    if (e.keyCode == 82) {
+        console.log('R pressed');
         $.deck('go', 'interlude-slide')
     }
 });

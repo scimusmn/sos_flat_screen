@@ -19,8 +19,8 @@
         $.deck('getSlide', to).find('video').each(function() {
             var myPlayer = _V_(this);
             myPlayer.load();
+            myPlayer.pause();
 //            myPlayer.play();
-//            myPlayer.currentTime(0);
         });
 
     });
