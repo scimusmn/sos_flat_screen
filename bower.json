@@ -3,7 +3,6 @@
 
   "dependencies": {
     "bootstrap": "~3.1.1",
-    "BigVideo.js": "~1.0.9",
     "deck.js": "~1.1.0",
     "modernizr": "~2.8.2"
   }
