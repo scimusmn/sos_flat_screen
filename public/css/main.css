@@ -43,3 +43,12 @@ body {
     -webkit-transition: opacity 1000ms ease-in-out 0ms;
     transition: opacity 1000ms ease-in-out 0ms;
 }
+
+.next-timer {
+    position: absolute;
+    top: 400px;
+    left: 265px;
+    font-size: 3em;
+    line-height: .8em;
+    width: 500px;
+}
