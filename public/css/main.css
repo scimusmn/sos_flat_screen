@@ -1,3 +1,6 @@
+/**
+ * Background setup
+ */
 body {
   background: #000;
 }
@@ -33,11 +36,7 @@ body {
 .interlude {
   font-size: 4em;
   color: #DDD;
-  width: 600px;
   margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
 .csstransitions.csstransforms .deck-container .slide {
