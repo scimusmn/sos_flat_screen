@@ -22,10 +22,11 @@ body {
     background:transparent;
 }
 
-.video-container {
+/**
+ * Our display is fixed to 1024x768, so set the slide size accordingly
+ */
+.slide {
   width: 1024px;
-  display: block;
-  overflow: hidden;
   height: 768px;
 }
 
