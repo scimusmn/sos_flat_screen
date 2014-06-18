@@ -113,7 +113,7 @@ $(document).bind('deck.change', function(event, from, to) {
     if (currentSlide.hasClass('timer-slide')) {
         theTimer = $('#' + currentSlide.attr('id') + ' .pie-timer').pietimer({
             seconds: 25,
-            colour: 'rgba(255, 255, 255, 0.2)',
+            colour: 'rgba(255, 255, 255, 0.6)',
             width: '150',
             height: '150'
         }, function () {
