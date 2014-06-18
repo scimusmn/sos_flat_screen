@@ -1,4 +1,4 @@
-# Science on a Sphere : Flat screen / Wall projection system
+# Science on a Sphere<br>Flat screen / Wall projection system
 
 ## Usage
 This system is installed in the Future Earth Theater on a Windows 7 PC.
