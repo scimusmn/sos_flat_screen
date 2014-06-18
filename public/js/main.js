@@ -81,9 +81,17 @@ $(document).keydown(function(e){
     /**
      * V
      */
-    if (e.keyCode == 67) {
-        console.log('C pressed');
+    if (e.keyCode == 86) {
+        console.log('V pressed');
         $.deck('go', "hot-air-interlude");
+    }
+
+    /**
+     * B
+     */
+    if (e.keyCode == 66) {
+        console.log('B pressed');
+        $.deck('go', "human-era-interlude");
     }
 });
 
@@ -93,7 +101,7 @@ $(document).keydown(function(e){
 $("#hot-air-interlude").on({
     'deck.becameCurrent': function(ev, direction) {
         $('#hot-air-interlude .pie-timer').pietimer({
-            seconds: 2000,
+            seconds: 30,
             colour: 'rgba(255, 255, 255, 0.2)',
             width: '150',
             height: '150'

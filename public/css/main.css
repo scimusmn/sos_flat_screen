@@ -62,6 +62,10 @@ body {
   position: absolute;
 }
 
+#earthmobile-interlude .film-title {
+  top: 410px;
+}
+
 .film-title h1 {
   font-family: 'GothamRnd-Medium', sans-serif;
   font-size: 40px;
@@ -70,13 +74,29 @@ body {
 
 .film-title h2 {
   font-family: 'GothamRnd-Light', sans-serif;
-  font-size: 120px;
+  font-size: 90px;
   margin: 0 0 0 65px;
 }
 .film-title h3 {
   font-family: 'GothamRnd-LightIta', sans-serif;
   font-size: 40px;
   margin: 0  0 10px 78px;
+}
+
+#earthmobile-interlude {
+  background: url('../media/img/earthmobile-back.png');
+}
+
+#acidifying-oceans-interlude {
+  background: url('../media/img/acidifying-oceans-back.png');
+}
+
+#eating-water-interlude {
+  background: url('../media/img/eating-water-back.png');
+}
+
+#human-era-interlude {
+  background: url('../media/img/human-era-back.png');
 }
 
 #hot-air-interlude {
