@@ -40,24 +40,78 @@ body {
   height: 768px;
 }
 
+.csstransitions.csstransforms .deck-container .slide {
+    -webkit-transition: opacity 1000ms ease-in-out 0ms;
+    transition: opacity 1000ms ease-in-out 0ms;
+}
+
+/**
+ * Interlude slides
+ */
 .interlude {
   font-size: 4em;
   color: #DDD;
   margin-top: 0;
 }
 
-.csstransitions.csstransforms .deck-container .slide {
-    -webkit-transition: opacity 1000ms ease-in-out 0ms;
-    transition: opacity 1000ms ease-in-out 0ms;
+.film-title {
+  background: #95a934;
+  color: #FFF;
+  padding: 15px 60px 30px 12px;
+  top: 90px;
+  position: absolute;
 }
 
-.next-timer,
-.message {
-    position: absolute;
-    top: 400px;
-    left: 265px;
-    font-size: 80px;
-    line-height: .8em;
-    width: 500px;
+.film-title h1 {
+  font-family: 'GothamRnd-Medium', sans-serif;
+  font-size: 40px;
+  margin-left: 13px;
+}
+
+.film-title h2 {
+  font-family: 'GothamRnd-Light', sans-serif;
+  font-size: 120px;
+  margin: 0 0 0 65px;
+}
+.film-title h3 {
+  font-family: 'GothamRnd-LightIta', sans-serif;
+  font-size: 40px;
+  margin: 0  0 10px 78px;
+}
+
+#hot-air-interlude {
+  background: url('../media/img/hot-air-back.png');
+}
+
+/**
+ * Interlude timer
+ */
+.pie-timer {
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+}
+
+/**
+ * Fonts
+ */
+@font-face {
+    font-family: 'GothamRnd-Light';
+    src: url('../fonts/GothamRnd-Light.otf');
+}
+
+@font-face {
+    font-family: 'GothamRnd-LightIta';
+    src: url('../fonts/GothamRnd-LightIta.otf');
+}
+
+@font-face {
+    font-family: 'GothamRnd-Medium';
+    src: url('../fonts/GothamRnd-Medium.otf');
+}
+
+@font-face {
+    font-family: 'GothamRnd-Bold';
+    src: url('../fonts/GothamRnd-Bold.otf');
 }
 

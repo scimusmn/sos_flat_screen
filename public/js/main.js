@@ -93,8 +93,10 @@ $(document).keydown(function(e){
 $("#hot-air-interlude").on({
     'deck.becameCurrent': function(ev, direction) {
         $('#hot-air-interlude .pie-timer').pietimer({
-            seconds: 20,
-            colour: '#B32037'
+            seconds: 2000,
+            colour: 'rgba(255, 255, 255, 0.2)',
+            width: '150',
+            height: '150'
         }, function () {
             $.deck('go', 'black-slide')
         });
