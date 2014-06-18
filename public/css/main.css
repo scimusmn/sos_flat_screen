@@ -40,6 +40,9 @@ body {
   height: 768px;
 }
 
+/**
+ * Customize the deck.js fade transition time
+ */
 .csstransitions.csstransforms .deck-container .slide {
     -webkit-transition: opacity 1000ms ease-in-out 0ms;
     transition: opacity 1000ms ease-in-out 0ms;
