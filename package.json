@@ -1,7 +1,7 @@
 {
-  "name": "controldeck",
-  "version": "0.0.0",
-  "description": "Control HTML5 Presentations with node.js",
+  "name": "SOS Flat Screen",
+  "version": "0.0.1",
+  "description": "Flat screen media display for the Science on a Sphere",
   "main": "app.js",
   "dependencies": {
     "node-static": "~0.7.3",
