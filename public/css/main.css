@@ -4,17 +4,24 @@
 body {
   background: #000;
 }
+
+/**
+ * Hide the cursor
+ */
+/**,*/
+/**:active,*/
+/**:hover*/
+/**:link,*/
+/**:visited {*/
+  /*[>cursor: url(../img/cursor.png), none !important;<]*/
+  /*cursor: none !important;*/
+/*}*/
+
+/**
+ * Prevent drag selection
+ */
 *::selection {
     background:transparent;
-}
-
-*,
-*:active,
-*:hover
-*:link,
-*:visited {
-  /*cursor: url(../img/cursor.png), none !important;*/
-  cursor: none !important;
 }
 
 *::-moz-selection {
