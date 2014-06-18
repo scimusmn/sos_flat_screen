@@ -8,3 +8,8 @@ progress/
 public/media/*
 !public/media/README.md
 !public/media/img
+#
+# Ignore licensed fonts. We have purchased rights to use these fonts, but
+# don't have the rights to distribute them, so I'm not tracking them in Git
+#
+public/fonts/Gotham*
