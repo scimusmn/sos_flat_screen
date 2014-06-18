@@ -32,7 +32,7 @@ $(document).keydown(function(e){
      */
     if (e.keyCode == 81) {
         console.log('Q - Loading paused Object Theater video.');
-        $.deck('go', 'objth-slide')
+        $.deck('go', 'earthmobile-slide')
     }
 
     /**
@@ -40,7 +40,7 @@ $(document).keydown(function(e){
      */
     if (e.keyCode == 87) {
         console.log('W - Playing Object Theater video.');
-        $('#objth-slide').find('video').each(function() {
+        $('#earthmobile-slide').find('video').each(function() {
             var myPlayer = _V_(this);
             myPlayer.play();
         });
@@ -55,21 +55,44 @@ $(document).keydown(function(e){
     }
 
     /**
-     * R
+     * Z
      */
-    if (e.keyCode == 82) {
-        console.log('R pressed');
-        $.deck('go', 'interlude-slide');
+    if (e.keyCode == 90) {
+        console.log('Z pressed');
+        $.deck('go', 'earthmobile-interlude');
+    }
 
+    /**
+     * X
+     */
+    if (e.keyCode == 88) {
+        console.log('X pressed');
+        $.deck('go', 'eating-water-interlude');
+    }
+
+    /**
+     * C
+     */
+    if (e.keyCode == 67) {
+        console.log('C pressed');
+        $.deck('go', 'acidifying-oceans-interlude');
+    }
+
+    /**
+     * V
+     */
+    if (e.keyCode == 67) {
+        console.log('C pressed');
+        $.deck('go', "hot-air-interlude");
     }
 });
 
 /**
  * Start the timer on the interlude slide, reset it when we leave this slide
  */
-$("#interlude-slide").on({
+$("#hot-air-interlude").on({
     'deck.becameCurrent': function(ev, direction) {
-        $('.next-timer').pietimer({
+        $('#hot-air-interlude .pie-timer').pietimer({
             seconds: 20,
             colour: '#B32037'
         }, function () {
