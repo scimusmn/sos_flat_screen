@@ -8,14 +8,14 @@ body {
 /**
  * Hide the cursor
  */
-/**,*/
-/**:active,*/
-/**:hover*/
-/**:link,*/
-/**:visited {*/
-  /*[>cursor: url(../img/cursor.png), none !important;<]*/
-  /*cursor: none !important;*/
-/*}*/
+*,
+*:active,
+*:hover
+*:link,
+*:visited {
+  [>cursor: url(../img/cursor.png), none !important;<]
+  cursor: none !important;
+}
 
 /**
  * Prevent drag selection
