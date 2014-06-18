@@ -96,29 +96,45 @@ $(document).keydown(function(e){
 });
 
 /**
- * Start the timer on the interlude slide, reset it when we leave this slide
+ * Setup the timer object so that we can talk to it across events
  */
-$("#hot-air-interlude").on({
-    'deck.becameCurrent': function(ev, direction) {
-        $('#hot-air-interlude .pie-timer').pietimer({
-            seconds: 30,
+var theTimer;
+
+/**
+ * Start the pietimer when you enter a slide
+ */
+$(document).bind('deck.change', function(event, from, to) {
+    // Only load the pietimer on slides with the 'timer-slide' class
+    var currentSlide = $.deck('getSlide', to);
+    if (currentSlide.hasClass('timer-slide')) {
+        theTimer = $('#' + currentSlide.attr('id') + ' .pie-timer').pietimer({
+            seconds: 25,
             colour: 'rgba(255, 255, 255, 0.2)',
             width: '150',
             height: '150'
         }, function () {
+            // Go to the black slide when the timer is out
             $.deck('go', 'black-slide')
         });
-    },
-    /**
-    * Reset the timer if we leave the interlude screen
-    */
-    'deck.lostCurrent': function(ev, direction) {
+    }
+});
+
+/**
+ * Teardown the timer when you leave a slide
+ *
+ * This prevents multiple timers from being loaded when entering a slide
+ * for the second time.
+ */
+$(document).bind('deck.beforeChange', function(event, from, to) {
+    var fromSlide = $.deck('getSlide', from);
+    if (fromSlide.hasClass('timer-slide')) {
+        theTimer.empty();
         clearInterval(interval);
     }
 });
 
 /**
- * Pie timer
+ * Pie timer generator
  */
 jQuery.fn.pietimer = function( options, callback ) {
     var settings = {
