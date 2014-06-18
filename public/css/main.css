@@ -84,23 +84,23 @@ body {
 }
 
 #earthmobile-interlude {
-  background: url('../media/img/earthmobile-back.png');
+  background: url('../media/img/earthmobile-back.png') no-repeat;
 }
 
 #acidifying-oceans-interlude {
-  background: url('../media/img/acidifying-oceans-back.png');
+  background: url('../media/img/acidifying-oceans-back.png') no-repeat;
 }
 
 #eating-water-interlude {
-  background: url('../media/img/eating-water-back.png');
+  background: url('../media/img/eating-water-back.png') no-repeat;
 }
 
 #human-era-interlude {
-  background: url('../media/img/human-era-back.png');
+  background: url('../media/img/human-era-back.png') no-repeat;
 }
 
 #hot-air-interlude {
-  background: url('../media/img/hot-air-back.png');
+  background: url('../media/img/hot-air-back.png') no-repeat;
 }
 
 /**
