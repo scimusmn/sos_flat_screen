@@ -24,7 +24,11 @@ var objthPlayer = videojs("objth", {
 
 /**
  * Listen for keystrokes
- */
+ *
+ * Keystrokes are simulated by the automation system and AutoIt scripts
+ * These can be found in the https://github.com/scimusmn/sos_autoit_scripts
+ *
+ **/
 $(document).keydown(function(e){
 
     /**
@@ -185,24 +189,30 @@ jQuery.fn.pietimer = function( options, callback ) {
     return this;
 }
 
+/**
+ * Old socket io listening code. We are controling the slide deck with
+ * simulated keystrokes now. But I want to keep this around for a bit until
+ * we can do some more testing.
+ */
+/*
+var iosocket = io.connect();
 
-//var iosocket = io.connect();
+iosocket.on('connect', function () {
+    console.log('connected');
+});
 
-//iosocket.on('connect', function () {
-    //console.log('connected');
-//});
-
-//iosocket.on('message', function(message) {
-    //console.log("Got a UDP message");
-    //switch(message) {
-        //case 'objth_play':
-            //objthPlay();
-            //break;
-        //case 'interlude':
-            //interludePlay();
-            //console.log('other');
-            //break;
-        //default:
-            //console.log('nothing');
-    //}
-//});
+iosocket.on('message', function(message) {
+    console.log("Got a UDP message");
+    switch(message) {
+        case 'objth_play':
+            objthPlay();
+            break;
+        case 'interlude':
+            interludePlay();
+            console.log('other');
+            break;
+        default:
+            console.log('nothing');
+    }
+});
+*/
