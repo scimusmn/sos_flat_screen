@@ -12,11 +12,13 @@ $(function() {
  * Any audio comes from the SOS.
  * This will help demonstrate any problems caused by switching on the amp.
  *
+ * I've re-enabled the audio, now that we're showing the program with the surround sound and music.
+ *
  * Disable the preloading spinner icon.
  * We don't want to show this to museum visitors while the video is loading.
  */
 var objthPlayer = videojs("objth", {
-    muted: true,
+    muted: false,
     children: {
         loadingSpinner: false
     }
