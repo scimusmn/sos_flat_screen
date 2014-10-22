@@ -32,6 +32,10 @@ var objthPlayer = videojs("objth", {
  *
  **/
 $(document).keydown(function(e){
+    $(document).find('audio').each(function() {
+      this.pause();
+       this.currentTime = 0;
+    });
 
     /**
      * Q
@@ -58,6 +62,50 @@ $(document).keydown(function(e){
     if (e.keyCode == 69) {
         console.log('E pressed');
         $.deck('go', 'black-slide')
+    }
+
+    /**
+     * A
+     */
+    if (e.keyCode == 65) {
+        console.log('A pressed');
+        $.deck('go', 'eating-water');
+        $('#eating-water').find('audio').each(function() {
+            this.play();
+        });
+    }
+
+    /**
+     * S
+     */
+    if (e.keyCode == 83) {
+        console.log('S pressed');
+        $.deck('go', 'acidifying-oceans');
+        $('#acidifying-oceans').find('audio').each(function() {
+            this.play();
+        });
+    }
+
+    /**
+     * D
+     */
+    if (e.keyCode == 68) {
+        console.log('D pressed');
+        $.deck('go', 'hot-air');
+        $('#hot-air').find('audio').each(function() {
+            this.play();
+        });
+    }
+
+    /**
+     * F
+     */
+    if (e.keyCode == 70) {
+        console.log('F pressed');
+        $.deck('go', 'human-era');
+        $('#human-era').find('audio').each(function() {
+            this.play();
+        });
     }
 
     /**
